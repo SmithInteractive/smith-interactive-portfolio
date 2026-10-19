@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smith Interactive | Game Developer</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #0b0b10;
+      color: #f5f3ff;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      padding: 22px 8%;
+      border-bottom: 1px solid #292735;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header a { color: #c4b5fd; text-decoration: none; }
+    nav a { margin-left: 22px; font-size: 14px; }
+    .hero {
+      min-height: 75vh;
+      padding: 100px 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: radial-gradient(ellipse at 80% 40%, #302047, #0b0b10 60%);
+    }
+    .eyebrow {
+      color: #c4b5fd;
+      letter-spacing: 3px;
+      font-size: 12px;
+    }
+    h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.05;
+      margin: 15px 0;
+      max-width: 850px;
+    }
+    .accent { color: #c4b5fd; }
+    .intro { max-width: 540px; color: #b7b3c7; }
+    .button {
+      display: inline-block;
+      background: #c4b5fd;
+      color: #111018;
+      padding: 12px 18px;
+      margin-top: 18px;
+      text-decoration: none;
+      font-weight: bold;
+      width: fit-content;
+    }
+    section { padding: 75px 8%; }
+    h2 { font-size: 36px; }
+    .project {
+      background: #15141e;
+      border: 1px solid #302b40;
+      padding: 30px;
+      margin-top: 25px;
+    }
+    .project-tag {
+      display: inline-block;
+      color: #d8ccff;
+      border: 1px solid #51416d;
+      padding: 5px 9px;
+      margin: 5px 5px 5px 0;
+      font-size: 12px;
+    }
+    .muted { color: #b7b3c7; }
+    footer {
+      border-top: 1px solid #292735;
+      padding: 25px 8%;
+      color: #aaa5ba;
+      font-size: 13px;
+    }
+    @media (max-width: 600px) {
+      header { align-items: flex-start; gap: 15px; flex-direction: column; }
+      nav a { margin: 0 15px 0 0; }
+      .hero { min-height: 65vh; padding-top: 70px; }
+      section { padding-top: 50px; padding-bottom: 50px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#"><strong>SMITH INTERACTIVE</strong></a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">GAME DEVELOPER · UNREAL ENGINE</p>
+      <h1>I build games that <span class="accent">break the rules.</span></h1>
+      <p class="intro">
+        I'm Benjamin Smith, a game development student creating
+        unusual mechanics, interactive experiences and playable worlds.
+      </p>
+      <a class="button" href="#projects">Explore my projects ↘</a>
+    </section>
+
+    <section id="projects">
+      <p class="eyebrow">SELECTED WORK</p>
+      <h2>Featured <span class="accent">projects.</span></h2>
+
+      <article class="project">
+        <p class="eyebrow">PROJECT 001 · IN DEVELOPMENT</p>
+        <h3>Just Another Puzzle Platformer</h3>
+        <p class="muted">
+          A puzzle platformer where breaking the rules is part of the
+          solution. Players are encouraged—and sometimes required—to
+          exploit mechanics and find unexpected ways forward.
+        </p>
+        <span class="project-tag">Unreal Engine</span>
+        <span class="project-tag">Blueprints</span>
+        <span class="project-tag">UI Design</span>
+        <span class="project-tag">Level Design</span>
+        <h4>My contributions</h4>
+        <p class="muted">
+          I developed the game mechanics and UI using Blueprints,
+          designed the levels, and used models and textures from Fab
+          to develop the environments beyond the greybox stage.
+        </p>
+      </article>
+
+      <article class="project">
+        <p class="eyebrow">PROJECT 002 · WORK IN PROGRESS</p>
+        <h3>Turn Crank</h3>
+        <p class="muted">
+          A VR horror-survival concept built around powering objects
+          and creating distractions to stay one step ahead of a threat.
+        </p>
+        <span class="project-tag">Unreal Engine</span>
+        <span class="project-tag">VR</span>
+        <span class="project-tag">Game Systems</span>
+      </article>
+    </section>
+
+    <section id="about">
+      <p class="eyebrow">ABOUT ME</p>
+      <h2>Designer mindset. <span class="accent">Developer hands.</span></h2>
+      <p class="muted">
+        I'm Benjamin Smith, a game development student focused on
+        creating interactive experiences in Unreal Engine. I enjoy
+        experimenting with mechanics, solving design problems, and
+        turning greybox ideas into playable spaces.
+      </p>
+    </section>
+
+    <section id="skills">
+      <p class="eyebrow">TOOLS OF THE TRADE</p>
+      <h2>My <span class="accent">toolkit.</span></h2>
+      <span class="project-tag">Unreal Engine</span>
+      <span class="project-tag">Blueprints</span>
+      <span class="project-tag">Game Mechanics</span>
+      <span class="project-tag">UI Development</span>
+      <span class="project-tag">Level Design</span>
+      <span class="project-tag">Fab Asset Integration</span>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Benjamin Smith · Smith Interactive
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
