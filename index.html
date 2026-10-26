@@ -65,12 +65,30 @@
     }
     section { padding: 75px 8%; }
     h2 { font-size: 36px; }
-    .project {
-      background: #15141e;
-      border: 1px solid #302b40;
-      padding: 30px;
-      margin-top: 25px;
-    }
+
+.project {
+  background: #15141e;
+  border: 1px solid #302b40;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 25px;
+  overflow: hidden;
+}
+
+.project-featured {
+  position: relative;
+  isolation: isolate;
+}
+
+.project-featured::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("Puzzle_platformer.png") center / cover no-repeat;
+  opacity: 0.18;
+  z-index: -1;
+}
+
     .project-tag {
       display: inline-block;
       color: #d8ccff;
@@ -107,16 +125,16 @@
   <main>
     <section class="hero">
       <p class="eyebrow">GAME DEVELOPER · UNREAL ENGINE</p>
-      <h1>Benjamin Smith <span class="accent">Making dreams come to life.</span></h1>
+      <h1>Benjamin Smith, <span class="accent">Making dreams playable. </span></h1>
       <p class="intro">
-        I'm Benjamin Smith, a game development student creating
+        I'm Benjamin Smith, a game development student studying Year 2 in Advanced Diploma Game Design creating
         unusual mechanics, interactive experiences and playable worlds.
       </p>
       <a class="button" href="#projects">Explore my projects ↘</a>
     </section>
 
     <section id="projects">
-      <p class="eyebrow">SELECTED WORK</p>
+      <p class="eyebrow"></p>
       <h2>Featured <span class="accent">projects.</span></h2>
 
       <article class="project">
@@ -124,9 +142,9 @@
         <h3>Just Another Puzzle Platformer</h3>
       <img src="Puzzle_platformer.png" alt="Just Another Puzzle Platformer gameplay" class="project-image">
         <p class="muted">
-          A puzzle platformer where breaking the rules is part of the
-          solution. Players are encouraged—and sometimes required—to
-          exploit mechanics and find unexpected ways forward.
+         This game is a puzzle platformer where breaking the rules is part of the
+          solution. Players are encouraged and sometimes required to
+          exploit mechanics use literal cheats and find unexpected ways to progress in the game.
         </p>
         <span class="project-tag">Unreal Engine</span>
         <span class="project-tag">Blueprints</span>
@@ -134,12 +152,11 @@
         <span class="project-tag">Level Design</span>
         <h4>My contributions</h4>
         <p class="muted">
-          I developed the game mechanics and UI using Blueprints,
-          designed the levels, and used models and textures from Fab
-          to develop the environments beyond the greybox stage.
+          I developed all the game mechanics, UI using Blueprints,
+          I designed all the levels, I used models and textures from the Fab store
+          to develop the environments and take the project beyond the greybox stage.
         </p>
       </article>
-
       <article class="project">
         <p class="eyebrow">PROJECT 002 · WORK IN PROGRESS</p>
         <h3>Interactive Story</h3>
